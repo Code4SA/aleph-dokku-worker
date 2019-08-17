@@ -1,4 +1,3 @@
 psycopg2==2.6.2
-newrelic==2.46.0.37
 git+git://github.com/Code4SA/aleph_zagazettecrawler.git
 git+git://github.com/Code4SA/aleph_za_entities.git

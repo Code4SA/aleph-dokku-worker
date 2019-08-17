@@ -30,8 +30,6 @@ dokku config:set aleph \
     ALEPH_BROKER_URI=sqs://sqs.eu-west-1.amazonaws.com/.../
     ALEPH_DATABASE_URI=postgresql://aleph:aleph@postgres/aleph \
     ALEPH_ELASTICSEARCH_URI=http://elasticsearch:9200/
-    NEW_RELIC_APP_NAME="Aleph Worker" \
-    NEW_RELIC_LICENSE_KEY=... \
     C_FORCE_ROOT='true' \
     POLYGLOT_DATA_PATH=/opt/aleph/data \
     TESSDATA_PREFIX=/usr/share/tesseract-ocr \
@@ -81,10 +79,6 @@ could make docker so upset you have to reinstall it.
 On a machine with 8GB RAM and CELERY_CONCURRENCY=4 running nothing else,
 I found `CELERYD_MAX_TASKS_PER_CHILD=5` to work well, utilising up to about
 6GB while ingesting already-OCR'd gazette PDFs.
-
-The NewRelic monitoring seems to have significant setup overhead so you
-want to have this as high as you can manage without making the machine
-unusable for hours.
 
 ## Debugging / troubleshooting
 
