@@ -44,13 +44,12 @@ dokku config:set aleph \
 ```
 
 ```
-docker run -d --name=tika logicalspark/docker-tikaserver
+dokku proxy:disable gazettes-aleph-dev-worker
 ```
 
 ```
 dokku docker-options:add aleph-worker run,deploy  "-v /var/log/aleph:/var/log"
 dokku docker-options:add aleph-worker run,deploy  "-v /var/lib/aleph:/opt/aleph/data"
-dokku docker-options:add aleph-worker run,deploy  "--link tika"
 ```
 
 
