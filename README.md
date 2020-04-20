@@ -36,8 +36,6 @@ dokku config:set aleph \
     ALEPH_PDF_OCR_IMAGE_PAGES=false \
     CELERY_CONCURRENCY=4 \
     CELERYD_MAX_TASKS_PER_CHILD=1 \
-    TIKA_URI='http://tika:9998/' \
-    PDF_TEXT_MODULE='tika' \
     LOGLEVEL=DEBUG \
     ZA_GAZETTE_ARCHIVE_URI=https://archive.opengazettes.org.za/ \
     CELERY_RDBSIG=1
